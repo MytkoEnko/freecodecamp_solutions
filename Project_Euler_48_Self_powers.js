@@ -1,3 +1,8 @@
+/*  You can find the description of the challange under next link:
+ *  https://learn.freecodecamp.org/coding-interview-prep/project-euler/problem-48-self-powers
+ *  Haven't started learning JS yet, so the solution is based on my C++ skills with only few adjustments.
+ */
+
 function selfPowers(power, lastDigits) {
   var pow = power;
   var last = lastDigits;
