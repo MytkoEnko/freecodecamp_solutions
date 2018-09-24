@@ -1,8 +1,7 @@
 function selfPowers(power, lastDigits) {
   var pow = power;
   var last = lastDigits;
-  var digits=1;
-  var answ=0,sum;
+  var digits=1,answ=0,sum;
 
   for (var i=last; i>0; i--)
   {
@@ -15,14 +14,10 @@ function selfPowers(power, lastDigits) {
      {
          sum=(sum%digits)*j;
      }
- 
     answ+=sum;
   }
  answ%=digits;
-
-
-
+  
   return answ;
 }
-
 selfPowers(1000, 10);
