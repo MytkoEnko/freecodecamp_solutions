@@ -13,8 +13,7 @@
    }
    return max;
  }
- findLongestWordLength("The quick brown fox
- jumped over the lazy dog"); //returns 6
+ findLongestWordLength("The quick brown fox jumped over the lazy dog"); //returns 6
 
 
  /*
@@ -63,8 +62,39 @@
     while(num>0) {
       answ+=str;
       num--;
-    } };
+    }
+  }
   return answ;
   }
 
   repeatStringNumTimes("abc", 3); //returns 'abcabcabc'
+
+  /*
+   *  Problem name: "Truncate a String"
+   *  url: https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/truncate-a-string
+   *  Task: Truncate a string (first argument) if it is longer than
+   * the given maximum string length (second argument). Return the truncated string with a ... ending.
+   */
+
+   function truncateString(str, num) {
+     return str.length>num? str.slice(0,num)+"...": str;
+   }
+
+  truncateString("A-tisket a-tasket A green and yellow basket", 8); //returns "A-tisket..."
+
+  /*
+   *  Problem name: "Finders Keepers"
+   *  url: https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/finders-keepers
+   *  Task: Create a function that looks through an array (first argument) and returns
+   *  the first element in the array that passes a truth test (second argument).
+   *  If no element passes the test, return undefined.
+   */
+
+   function findElement(arr, func) {
+  for (var num in arr){
+    if(func(arr[num])) return arr[num];
+      }
+      return undefined;
+    }
+
+    findElement([1, 2, 3, 4], num => num % 2 === 0); //returns 2
