@@ -102,3 +102,20 @@ function findElement(arr, func) {
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0); //returns 2
+
+/*
+ *  Problem name: "Title Case a Sentence"
+ *  url: https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence/
+ *  Task: Return the provided string with the first letter of each word capitalized.
+ * Make sure the rest of the word is in lower case.
+ */
+function titleCase(str) {
+  str = str.toLowerCase();
+  //regex doesn't exclude character preceeded by apostrophe, needs work
+  str = str.replace(/\b\w/g, (x) => {
+    return x[0].toUpperCase();
+  })
+  return str;
+}
+
+titleCase("I'm a little tea pot"); // returns "I'M A Little Tea Pot"
